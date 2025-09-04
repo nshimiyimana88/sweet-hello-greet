@@ -1,21 +1,24 @@
+import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { MapPin, Users, Award, Globe, Wheat, Factory, Target, Eye, Building2, Truck, Scale, Calendar } from "lucide-react";
+import { MapPin, Users, Award, Globe, Factory, Building2, Eye, Target } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Navigation />
+      
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary/5 to-secondary/10 py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-gradient-to-br from-[hsl(var(--food-green)/0.1)] via-[hsl(var(--food-orange)/0.1)] to-[hsl(var(--food-blue)/0.1)] py-20 overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/placeholder.svg')] opacity-5"></div>
+        <div className="container mx-auto px-4 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge variant="secondary" className="mb-4">
+            <Badge variant="secondary" className="mb-4 bg-[hsl(var(--food-green)/0.1)] border-primary">
               <Factory className="w-4 h-4 mr-2" />
               Food Processing Excellence
             </Badge>
-            <h1 className="text-5xl font-bold text-foreground mb-6">
+            <h1 className="text-6xl font-bold text-foreground mb-6 bg-gradient-to-r from-[hsl(var(--food-green))] to-[hsl(var(--food-orange))] bg-clip-text text-transparent">
               JONATHAN GROUP RWANDA Ltd
             </h1>
             <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
@@ -23,10 +26,10 @@ const Index = () => {
               through quality cereal processing, located in Kigali's Special Economic Zone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-gradient-to-r from-[hsl(var(--food-green))] to-[hsl(var(--food-orange))] hover:opacity-90 shadow-[var(--shadow-glow)]">
                 Our Products
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="border-primary hover:bg-primary/10">
                 Contact Us
               </Button>
             </div>
@@ -38,7 +41,7 @@ const Index = () => {
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="text-center">
+            <Card className="text-center shadow-[var(--shadow-glow)] hover:shadow-lg transition-all hover:-translate-y-1">
               <CardHeader>
                 <MapPin className="w-12 h-12 mx-auto text-primary mb-4" />
                 <CardTitle>Strategic Location</CardTitle>
@@ -48,7 +51,7 @@ const Index = () => {
               </CardHeader>
             </Card>
             
-            <Card className="text-center">
+            <Card className="text-center shadow-[var(--shadow-glow)] hover:shadow-lg transition-all hover:-translate-y-1">
               <CardHeader>
                 <Globe className="w-12 h-12 mx-auto text-primary mb-4" />
                 <CardTitle>National Reach</CardTitle>
@@ -58,7 +61,7 @@ const Index = () => {
               </CardHeader>
             </Card>
             
-            <Card className="text-center">
+            <Card className="text-center shadow-[var(--shadow-glow)] hover:shadow-lg transition-all hover:-translate-y-1">
               <CardHeader>
                 <Award className="w-12 h-12 mx-auto text-primary mb-4" />
                 <CardTitle>International Standards</CardTitle>
@@ -71,32 +74,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Rice Mill Process Section */}
-      <section className="py-16 bg-muted/30">
+      {/* Quick Overview */}
+      <section className="py-16 bg-gradient-to-r from-[hsl(var(--food-green)/0.05)] to-[hsl(var(--food-orange)/0.05)]">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Rice Mill Plant & Food Processing</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                 JONATHAN GROUP RWANDA Ltd is a rice mill plant that helps to get rice grain from paddy 
-                by removing rice husk and rice bran before packaging. The basic raw material is paddy 
-                (raw form of rice crop), and quality depends on both the crop and processing excellence.
+                by removing rice husk and rice bran before packaging. Quality depends on both the crop and processing excellence.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Industry Overview</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   When it comes to food processing, the industry is worth billions of dollars globally. 
-                  In Rwanda, the food processing industry is at the baby stage, presenting immense opportunities. 
-                  Processed foods like instant noodles, pasta, tomato pastes are mainly imported yet 
-                  they're integral to modern meals and daily lives.
-                </p>
-                <p className="text-muted-foreground leading-relaxed mb-6">
-                  This demand allows us to build a well-managed food processing and packaging business 
-                  that can grow into a conglomerate. The cereals food processing industry is a major 
-                  economic sector in countries like Brazil, Ukraine, China, India, Thailand, and Pakistan.
+                  In Rwanda, the food processing industry is at the baby stage, presenting immense opportunities.
                 </p>
                 
                 <div className="space-y-4">
@@ -124,52 +119,30 @@ const Index = () => {
                 </div>
               </div>
               
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Factory className="w-6 h-6 text-primary" />
-                    Processing Excellence
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold mb-2">Quality Control</h4>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        Every product undergoes extensive internal checks through our world-class 
-                        quality control department to meet all regulatory standards.
-                      </p>
-                    </div>
-                    
-                    <Separator />
-                    
-                    <div>
-                      <h4 className="font-semibold mb-2">Raw Materials</h4>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        We source premium paddy and cereals from farmer cooperatives across 
-                        all districts of Rwanda, ensuring consistent quality.
-                      </p>
-                    </div>
-                    
-                    <Separator />
-                    
-                    <div>
-                      <h4 className="font-semibold mb-2">Processing Capacity</h4>
-                      <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Rice: 312 tons/month</li>
-                        <li>• Maize Flour: 208 tons/month</li>
-                        <li>• Animal Feeds: 312 tons/month</li>
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center p-6 bg-gradient-to-br from-[hsl(var(--food-green)/0.1)] to-[hsl(var(--food-orange)/0.1)] rounded-lg">
+                  <h4 className="font-bold text-2xl text-primary mb-2">312</h4>
+                  <p className="text-sm text-muted-foreground">Tons Rice/Month</p>
+                </div>
+                <div className="text-center p-6 bg-gradient-to-br from-[hsl(var(--food-orange)/0.1)] to-[hsl(var(--food-blue)/0.1)] rounded-lg">
+                  <h4 className="font-bold text-2xl text-primary mb-2">208</h4>
+                  <p className="text-sm text-muted-foreground">Tons Maize/Month</p>
+                </div>
+                <div className="text-center p-6 bg-gradient-to-br from-[hsl(var(--food-blue)/0.1)] to-[hsl(var(--food-green)/0.1)] rounded-lg">
+                  <h4 className="font-bold text-2xl text-primary mb-2">312</h4>
+                  <p className="text-sm text-muted-foreground">Tons Feeds/Month</p>
+                </div>
+                <div className="text-center p-6 bg-gradient-to-br from-[hsl(var(--food-green)/0.1)] to-[hsl(var(--food-blue)/0.1)] rounded-lg">
+                  <h4 className="font-bold text-2xl text-primary mb-2">30</h4>
+                  <p className="text-sm text-muted-foreground">Districts Covered</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Vision & Mission */}
+      {/* Vision & Mission Preview */}
       <section className="py-16 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -180,8 +153,8 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-              <Card className="h-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <Card className="h-full shadow-[var(--shadow-glow)]">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Eye className="w-6 h-6 text-primary" />
@@ -190,16 +163,14 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    We aren't into this business only to earn massive revenue. We are very passionate about 
-                    creating a successful food processing business, which will be in competition with already 
-                    existing companies. We believe that with the right efforts, we will be ranked among one 
-                    of the top 5 food processing companies in Rwanda within five years. We are sure we will 
-                    achieve this as we have full dedication into bringing this into reality.
+                    We are passionate about creating a successful food processing business that competes 
+                    with established companies. Our goal is to be ranked among the top 5 food processing 
+                    companies in Rwanda within five years.
                   </p>
                 </CardContent>
               </Card>
               
-              <Card className="h-full">
+              <Card className="h-full shadow-[var(--shadow-glow)]">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Target className="w-6 h-6 text-primary" />
@@ -208,249 +179,8 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    To establish a stellar company, we are required to offer our customers products of 
-                    exceptional quality. Our aim is to build a lasting brand known for delivering premium 
-                    products. Every product of ours will go through extensive internal checks and quality 
-                    control procedures. We have a world-class and fully equipped quality control department, 
-                    which will be in charge of every production procedure to ensure deliverables pass all 
-                    regulatory standards.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-            
-            <Card>
-              <CardHeader>
-                <CardTitle>Business Description</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  JONATHAN GROUP RWANDA Ltd is a food processing company focused on adding value to cereals 
-                  (rice, maize, soya, etc.) produced in Rwanda. Located in Kigali Economic Zone, we serve 
-                  the global market, especially Rwanda, Eastern Africa, Africa, and Europe.
-                </p>
-                <p className="text-muted-foreground leading-relaxed">
-                  Our factory also produces animal feeds from cereal processing remains, providing nutrition 
-                  for fish, cows, pigs, and other livestock, serving farmers in Rwanda and beyond.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Products & Services */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Our Products & Services</h2>
-              <p className="text-lg text-muted-foreground">
-                Premium quality cereals and feeds processed with international standards
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Wheat className="w-6 h-6 text-primary" />
-                    Rice Products
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Premium rice produced from Rwandan farmers' cooperatives, offering long, 
-                    middle, and short grain varieties.
-                  </p>
-                  <div className="space-y-2">
-                    <Badge variant="outline">Long Grain Rice</Badge>
-                    <Badge variant="outline">Middle Grain Rice</Badge>
-                    <Badge variant="outline">Short Grain Rice</Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-3">
-                    Packaged in sacs of different sizes for wholesale and retail distribution.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Scale className="w-6 h-6 text-primary" />
-                    Maize Flour
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    High-quality maize flour processed from maize grain sourced from 
-                    cooperatives across different districts.
-                  </p>
-                  <div className="space-y-2">
-                    <Badge variant="outline">Premium Grade</Badge>
-                    <Badge variant="outline">Standard Grade</Badge>
-                    <Badge variant="outline">Commercial Grade</Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-3">
-                    Available in various package sizes to meet different market needs.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Users className="w-6 h-6 text-primary" />
-                    Animal Feeds
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    Nutritious animal feeds produced from cereal processing remains, 
-                    enhanced with additional ingredients.
-                  </p>
-                  <div className="space-y-2">
-                    <Badge variant="outline">Cattle Feed</Badge>
-                    <Badge variant="outline">Pig Feed</Badge>
-                    <Badge variant="outline">Chicken Feed</Badge>
-                    <Badge variant="outline">Fish Feed</Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-3">
-                    Sold to farmers for livestock nutrition across Rwanda and beyond.
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Business Operations */}
-      <section className="py-16 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">Business Operations</h2>
-              <p className="text-lg text-muted-foreground">
-                Strategic operations designed for efficiency and market penetration
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Truck className="w-6 h-6 text-primary" />
-                    Pricing & Distribution
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold mb-2">Rice Pricing</h4>
-                      <p className="text-muted-foreground text-sm mb-2">
-                        Factory selling price: 1,000 RWF per kg (10% reduction from retail to account for distributor margin)
-                      </p>
-                    </div>
-                    
-                    <Separator />
-                    
-                    <div>
-                      <h4 className="font-semibold mb-2">Distribution Network</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Company-run selling points across all 30 districts of Rwanda, 
-                        where wholesalers and retailers can purchase stocks.
-                      </p>
-                    </div>
-                    
-                    <Separator />
-                    
-                    <div>
-                      <h4 className="font-semibold mb-2">Market Pricing</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Maize flour and animal feed prices determined by market trends at production time.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Calendar className="w-6 h-6 text-primary" />
-                    Production Program
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold mb-2">Monthly Capacity</h4>
-                      <ul className="text-sm text-muted-foreground space-y-1">
-                        <li>• Rice: 312 tons/month</li>
-                        <li>• Maize Flour: 208 tons/month</li>
-                        <li>• Animal Feeds: 312 tons/month</li>
-                      </ul>
-                    </div>
-                    
-                    <Separator />
-                    
-                    <div>
-                      <h4 className="font-semibold mb-2">Annual Capacity</h4>
-                      <p className="text-muted-foreground text-sm mb-2">
-                        7,488 tons at full capacity in 2 shifts after the second year of operation.
-                      </p>
-                    </div>
-                    
-                    <Separator />
-                    
-                    <div>
-                      <h4 className="font-semibold mb-2">Growth Plan</h4>
-                      <p className="text-muted-foreground text-sm">
-                        Start at 80% capacity, increase by 10% annually, reaching 100% by year two.
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Company Leadership */}
-      <section className="py-16 bg-muted/30">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-12">Leadership & Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Users className="w-6 h-6 text-primary" />
-                    Leadership
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground mb-4">
-                    <strong>Jonathan NSENGIMANA</strong> - Founder & CEO
-                  </p>
-                  <p className="text-muted-foreground">
-                    Leading with experienced technical staff, engineers, technicians, and managers 
-                    specializing in rice mill business development to build a competent workforce.
-                  </p>
-                </CardContent>
-              </Card>
-              
-              <Card>
-                <CardHeader>
-                  <CardTitle>Our Values</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Client's best interests always come first. Everything we do is guided by 
-                    professional ethics and accountability to the highest standards, ensuring 
-                    we meet our client's needs precisely and completely.
+                    To establish a stellar company offering customers products of exceptional quality 
+                    through world-class quality control procedures and regulatory standards compliance.
                   </p>
                 </CardContent>
               </Card>
@@ -460,7 +190,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16 bg-primary/5">
+      <section className="py-16 bg-gradient-to-br from-[hsl(var(--food-green)/0.1)] to-[hsl(var(--food-orange)/0.1)]">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
@@ -469,10 +199,10 @@ const Index = () => {
               Contact us to learn more about our wholesale opportunities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
+              <Button size="lg" className="bg-gradient-to-r from-[hsl(var(--food-green))] to-[hsl(var(--food-orange))] hover:opacity-90">
                 Contact Sales Team
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="border-primary hover:bg-primary/10">
                 Request Quote
               </Button>
             </div>
