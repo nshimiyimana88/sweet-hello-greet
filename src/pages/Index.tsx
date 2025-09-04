@@ -78,8 +78,9 @@ const Index = () => {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Rice Mill Plant & Food Processing</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                JONATHAN GROUP RWANDA Ltd is a rice mill plant that transforms paddy into premium rice 
-                by removing rice husk and bran, ensuring quality through advanced processing and packaging.
+                JONATHAN GROUP RWANDA Ltd is a rice mill plant that helps to get rice grain from paddy 
+                by removing rice husk and rice bran before packaging. The basic raw material is paddy 
+                (raw form of rice crop), and quality depends on both the crop and processing excellence.
               </p>
             </div>
             
@@ -87,14 +88,15 @@ const Index = () => {
               <div>
                 <h3 className="text-2xl font-semibold mb-6">Industry Overview</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  In Rwanda, the food processing industry is at a nascent stage, presenting immense opportunities. 
-                  While the global food processing industry is worth billions, processed foods in Rwanda are mainly 
-                  imported, despite being integral to modern meals.
+                  When it comes to food processing, the industry is worth billions of dollars globally. 
+                  In Rwanda, the food processing industry is at the baby stage, presenting immense opportunities. 
+                  Processed foods like instant noodles, pasta, tomato pastes are mainly imported yet 
+                  they're integral to modern meals and daily lives.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our vision is to establish a well-managed food processing business that can grow into a 
-                  conglomerate, addressing the growing demand for processed foods like instant noodles, 
-                  pasta, and other convenient food items.
+                  This demand allows us to build a well-managed food processing and packaging business 
+                  that can grow into a conglomerate. The cereals food processing industry is a major 
+                  economic sector in countries like Brazil, Ukraine, China, India, Thailand, and Pakistan.
                 </p>
                 
                 <div className="space-y-4">
@@ -188,9 +190,11 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    We are passionate about creating a successful food processing business that competes 
-                    with established companies. Our goal is to be ranked among the top 5 food processing 
-                    companies in Rwanda within five years, driven by dedication and innovative excellence.
+                    We aren't into this business only to earn massive revenue. We are very passionate about 
+                    creating a successful food processing business, which will be in competition with already 
+                    existing companies. We believe that with the right efforts, we will be ranked among one 
+                    of the top 5 food processing companies in Rwanda within five years. We are sure we will 
+                    achieve this as we have full dedication into bringing this into reality.
                   </p>
                 </CardContent>
               </Card>
@@ -204,9 +208,12 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <p className="text-muted-foreground leading-relaxed">
-                    To establish a stellar company offering customers products of exceptional quality. 
-                    We aim to build a lasting brand known for delivering premium products that pass 
-                    all regulatory standards through our world-class quality control procedures.
+                    To establish a stellar company, we are required to offer our customers products of 
+                    exceptional quality. Our aim is to build a lasting brand known for delivering premium 
+                    products. Every product of ours will go through extensive internal checks and quality 
+                    control procedures. We have a world-class and fully equipped quality control department, 
+                    which will be in charge of every production procedure to ensure deliverables pass all 
+                    regulatory standards.
                   </p>
                 </CardContent>
               </Card>
